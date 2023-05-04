@@ -28,6 +28,10 @@ public:
         return elements[inIndex_r];
     }
 
+    table(const table& t) = delete;
+    //Person(const Person& p) = delete;
+    table& operator=(const table&) = delete;
+
     ~table()
     {
         for (int i = 0; i < rows; i++) {
