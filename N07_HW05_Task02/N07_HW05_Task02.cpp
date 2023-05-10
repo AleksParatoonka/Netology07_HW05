@@ -29,7 +29,6 @@ public:
     }
 
     table(const table& t) = delete;
-    //Person(const Person& p) = delete;
     table& operator=(const table&) = delete;
 
     ~table()
@@ -46,7 +45,8 @@ private:
 
 int main()
 {
-    auto test = table<int>(2, 3);
+    table<int> test(2, 3);
+    //auto test = table<int>{ 2, 3 };
     test[0][0] = 8;  
     std::cout << test[0][0] << std::endl;
 }
